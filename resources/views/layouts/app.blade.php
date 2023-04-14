@@ -18,7 +18,9 @@
 <body>
 
     <header>
-        <h1>DC Comics</h1>
+        <div class="container">
+            <h1>DC Comics</h1>
+        </div>
     </header>
 
     <main>
@@ -26,7 +28,9 @@
     </main>
 
     <footer>
-        Questo è il footer
+        <div class="container">
+            <p>Questo è il footer</p>
+        </div>
     </footer>
 
 </body>
