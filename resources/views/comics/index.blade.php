@@ -12,7 +12,7 @@
             <th>Serie</th>
             <th>Data di vendita</th>
             <th>Tipo</th>
-            <th>Link</th>
+            <th>Dettagli</th>
         </thead>
         @foreach ($comics as $comic)
             <tr class="">
@@ -23,7 +23,7 @@
                 <td>{{ $comic->sale_date }}</td>
                 <td>{{ $comic->type }}</td>
                 <td>
-                    <a href="{{ route('comics.show', $comic->id)  }}"></a>
+                    <a href="{{ route('comics.show', $comic->id)  }}">Pagina di dettaglio</a>
                 </td>
             </tr>
         @endforeach
