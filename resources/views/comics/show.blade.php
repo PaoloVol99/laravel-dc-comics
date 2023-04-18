@@ -1,9 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-    
+
     <div class="container">
-        <h1>{{ $comic->title }}</h1>
+        <div class="row">
+            <div class="col">
+                <h1>{{ $comic->title }}</h1>
+            </div>
+            <div class="col-auto">
+                <a href="{{ route('comics.index') }}" class="btn btn-primary">
+                    Torna alla lista completa
+                </a>
+            </div>            
+        </div>
     </div>
 
     <div class="container">

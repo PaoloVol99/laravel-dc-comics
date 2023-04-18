@@ -3,16 +3,17 @@
 @section('content')
 
     <div class="container">
-        <h3>Nuovo fumetto</h1>
+        <h3>Modifica: {{ $comic->title }}</h1>
         <form action="">
             <input type="text">
         </form>
     </div>
 
     <div class="container">
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic) }}" method="POST">
             
           @csrf
+          @method('PUT')
     
           <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
@@ -43,6 +44,7 @@
     
     
         </form>
+    </div>
 
     
 
