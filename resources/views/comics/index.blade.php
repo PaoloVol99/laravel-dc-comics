@@ -32,7 +32,14 @@
                     <a href="{{ route('comics.show', $comic->id)  }}">Pagina di dettaglio</a>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="{{ route('comics.edit', $comic)  }}">Modifica</a>
+                    <div class="d-flex gap-1">
+                        <a class="btn btn-primary btn-sm" href="{{ route('comics.edit', $comic)  }}">Edit</a>
+                        <form action="{{ route('comics.destroy',$comic) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                          </form>
+                    </div>
                 </td>
             </tr>
         @endforeach
